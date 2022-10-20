@@ -1,0 +1,6 @@
+
+*.iml
+*.xml
+node_modules
+*.idea
+login-and-membership-system/package-lock.json
