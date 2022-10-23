@@ -4,16 +4,15 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import Header from "./Header";
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 
 const DashboardLayout = (props) => {
@@ -31,7 +30,7 @@ const DashboardLayout = (props) => {
                     <ListItem key={text} disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}
+                                <Brightness7Icon color={"success"} fontSize={"large"}/>
                             </ListItemIcon>
                             <ListItemText primary={text}/>
                         </ListItemButton>

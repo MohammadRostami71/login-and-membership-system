@@ -1,10 +1,10 @@
 import * as React from "react";
-import axios from 'axios'
 import useSWR from 'swr'
+import axios from 'axios'
 import {Link} from "react-router-dom";
 import {Button, ListItemButton, ListItemText, Box, Grid} from '@mui/material';
 import Skeleton from '@mui/material/Skeleton';
-
+import HOC from "../components/layout/HOC";
 
 const PostsLists = () => {
     const fetcher = url => axios.get(url).then(res => res.data)
@@ -14,6 +14,7 @@ const PostsLists = () => {
                                      height={500} width={1200}>Loading ...</Skeleton></div>
     return (
         <Box>
+            <h1>All Posts</h1>
             {data.map(item => (
                 <Grid
                     key={item.id}
@@ -34,4 +35,4 @@ const PostsLists = () => {
     )
 };
 
-export default PostsLists;
+export default HOC(PostsLists);

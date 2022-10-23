@@ -5,6 +5,7 @@ import {Box, Card, CardContent, CardActions, Typography, Button} from "@mui/mate
 import {useParams} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {addToFav, removeFromFav} from "../store/favoriteSlice";
+import HOC from "../components/layout/HOC";
 
 const PostDetails = () => {
     let {id} = useParams();
@@ -40,4 +41,4 @@ const PostDetails = () => {
     )
 };
 
-export default PostDetails;
+export default HOC(PostDetails) ;
