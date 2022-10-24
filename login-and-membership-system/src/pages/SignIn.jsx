@@ -44,7 +44,6 @@ const SignIn = () => {
                     aria-invalid={errors.mail ? "true" : "false"}
                 />
                 {errors.email && <p role="alert">{errors.email?.message}</p>}
-                {/*<input type="submit"/>*/}
                 <button type="submit">SignIn</button>
             </form>
             <Button onClick={() => history.replace('/signup')} variant="outlined" color="error" size="large">SignUp</Button>
